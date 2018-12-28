@@ -3,6 +3,8 @@
 配置：
 
 `pip install locustio`
+
+`pip install lxml`
  
 自定义相关参数：
 > edit conf.py
@@ -20,6 +22,7 @@
 3. 多进程：
 
 	`locust -f demo.py --master`
+	
 	`locust -f demo.py --slave`
 
  
