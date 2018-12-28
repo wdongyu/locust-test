@@ -46,7 +46,7 @@ class WebsiteTasks(TaskSet):
         if self.check_empty(1):
             c_url = random.choice(self.depth_url[1])
             with self.client.get(c_url, catch_response=True) as response:
-                print("Random : " + c_url)
+                # print("Random : " + c_url)
                 # print(str(response.status_code) + "==========")
                 if response.status_code in conf.error_code:
                     response.failure("Error " + str(response.status_code) + " for " + c_url)
@@ -85,7 +85,7 @@ class WebsiteTasks(TaskSet):
             c_url = random.choice(self.depth_url[depth])
             # response = self.client.get(url)
             with self.client.get(c_url, catch_response=True) as response:
-                print("Deep : " + c_url)
+                # print("Deep : " + c_url)
                 # print(str(response.status_code) + "==========")
                 if response.status_code in conf.error_code:
                     response.failure("Error " + str(response.status_code) + " for " + c_url)
