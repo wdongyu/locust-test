@@ -15,7 +15,7 @@ class WebsiteTasks(TaskSet):
         self.index()
         # self.cur_urls = self.root_urls
 
-    # @task(conf.index_percent)
+    @task(conf.index_percent)
     def index(self):
         html = self.client.get("/").content
         dom_tree = etree.HTML(html)
